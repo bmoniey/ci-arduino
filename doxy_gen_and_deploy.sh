@@ -184,6 +184,7 @@ if [ -d "html" ] && [ -f "html/index.html" ]; then
     # that might otherwise be exposed.
     echo 'Git pushing'
     git push --force "https://${AUTH}@github.com/${REPO_SLUG}.git" > /dev/null 2>&1
+	exit 0
 else
     echo '' >&2
     echo 'Warning: No documentation (html) files have been found!' >&2
