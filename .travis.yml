@@ -15,7 +15,7 @@ addons:
     packages:
       - python3-pip
       - python3-wheel
-      - clang-format-5.0
+      - clang-format-5.0ls 
 env:
   global:
 #    - ARDUINO_IDE_VERSION="1.8.10"
@@ -28,6 +28,7 @@ before_install:
    - curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/run-clang-format.py > run-clang-format.py
 
 install:
+   - rm -rf ~/arduino_ide/libraries/Adafruit_SSD1306
    - git clone --branch protected https://github.com/bmoniey/Adafruit_SSD1306.git ~/arduino_ide/libraries/Adafruit_SSD1306
    - arduino --install-library "Adafruit GFX Library"
 
