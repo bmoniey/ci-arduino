@@ -28,7 +28,7 @@ before_install:
    - curl -SLs https://raw.githubusercontent.com/adafruit/travis-ci-arduino/master/run-clang-format.py > run-clang-format.py
 
 install:
-   - git clone -branch protected https://github.com/bmoniey/Adafruit_SSD1306.git ~/arduino_ide/libraries
+   - git clone --branch protected https://github.com/bmoniey/Adafruit_SSD1306.git ~/arduino_ide/libraries
    - arduino --install-library "Adafruit GFX Library"
 
 script:
